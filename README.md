@@ -32,10 +32,13 @@
      utilities (such as `ndctl`), and other convenience operations such as
      copying your `~/.ssh/id_rsa.pub` for easy ssh access, and your `~/.bashrc`
      etc.
-   - Boot qemu with the newly compiled kernel provided on the qemu command line,
-     and using the rootfs image above
    - Various options influence the qemu command line generated - there are
      options to select NUMA config, NVDIMMs, NVME devices, CXL devices etc.
+   - Create and use the `qbuild` working directory under the current path. This
+     contains all the setup for `mkosi`, the default `root.img` rootfs image, OVMF
+     files and qemu raw/memory backed files.
+   - Boot qemu with the newly compiled kernel provided on the qemu command line,
+     and using the rootfs image above.   
  - More detailed CLI help is available with `run_qemu.sh --help`
  - Once qemu starts, in nographic mode, the Linux console 'takes over' the
    terminal. To interact with it, the following are useful:
